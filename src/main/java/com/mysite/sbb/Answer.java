@@ -1,5 +1,7 @@
 package com.mysite.sbb;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,7 +23,7 @@ public class Answer {
 	@Column(columnDefinition = "TEXT")
 	private String content;
 
-	private String createDate;
+	private LocalDateTime createDate;
 
 	@ManyToOne
 	private Question question;
