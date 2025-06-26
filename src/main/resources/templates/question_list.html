@@ -13,13 +13,12 @@
 		</tr>
     </thead>
   <tbody>
-  		<tr th:each ="question : ${questionList}">
-            <td th:text="${question.subject}"></td>
+        <tr th:each="question, index : ${questionList}">
+            <td>
+                <a th:href="@{|/question/detail/${question.id}|}" th:text="${question.subject}"></a>
+            </td>
             <td th:text="${question.createDate}"></td>
-<!--    [[ ]] 를 이용하여 th:text를 대치하여 사용이 가능함     -->
-<!--       	<td> [[${question.subject}]] </td> -->
-<!--       	<td> [[${question.createDate}]] </td> -->
-		</tr>
+        </tr>
   </tbody>	
 </table>
 </body>
