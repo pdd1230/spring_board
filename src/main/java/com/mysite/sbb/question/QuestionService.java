@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Service
-public class QuestionServive {
+public class QuestionService {
 
 	private final QuestionRepository questionRepository;
 
@@ -30,6 +30,6 @@ public class QuestionServive {
 		} else {
 			throw new DataNotFoundException("question not found");
 		}
-
 	}
+
 }

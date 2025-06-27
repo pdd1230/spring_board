@@ -17,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 public class QuestionController {
 
 	// Controller 에 있는 repository 기능을 모두 service 에게 전달
-	private final QuestionServive questionService;
+	private final QuestionService questionService;
 
 	// 질문 목록
 	@GetMapping("/list")
