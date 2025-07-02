@@ -37,6 +37,12 @@ dependencies {
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 	// validation
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+<<<<<<< HEAD
+=======
+	// security 
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+>>>>>>> df1c2f7 (게시물에 번호 지정하기, 답변 갯수 표시, 스프링 시큐리티 설정)
 }
 
 
