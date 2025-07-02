@@ -15,13 +15,11 @@ import com.mysite.sbb.answer.AnswerForm;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
-// @RequestMapping을 이용해서 프리픽스(prefix 접두사) 지정해서 사용
 @RequestMapping("/question")
 @RequiredArgsConstructor
 @Controller
 public class QuestionController {
 
-	// Controller 에 있는 repository 기능을 모두 service 에게 전달
 	private final QuestionService questionService;
 
 	// 질문 목록
@@ -60,8 +58,4 @@ public class QuestionController {
 		return "redirect:/question/list";
 	}
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> df1c2f7 (게시물에 번호 지정하기, 답변 갯수 표시, 스프링 시큐리티 설정)
