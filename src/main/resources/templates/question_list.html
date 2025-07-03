@@ -1,13 +1,5 @@
-<!doctype html>
-
 <!-- 타임리프의 layout:decorate 속성은 템플릿의 레이아웃(부모 템플릿, 여기서는 layout.html) 설정함 -->
 <html layout:decorate="~{layout}">
-<head>
-<meta charset="UTF-8" />
-<title>Document</title>
-</head>
-<body>
-
 	<!-- 타임리프의 layout:fragment="content" 속성은 부모 템플릿의 요소를 자식에게 상속한다  -->
 	<div layout:fragment="content" class="container my-3">
 		<table class="table">
@@ -20,10 +12,6 @@
 			</thead>
 			<tbody>
 				<!-- 번호는 loop.count를 사용하여 표시 : 자바객체의 id가 아님(주의), 단순 번호임 -->
-				<tr th:each="question, loop : ${paging}">
-					<td th:text="${loop.count}"></td>
-					<td><a th:href="@{|/question/detail/${question.id}|}"
-						th:text="${question.subject}"></a></td>
 				<tr th:each="question, loop : ${paging}">
 					<!--  게시글 번호 공식 적용				 -->
 					<td
@@ -66,7 +54,4 @@
 
 		<a th:href="@{/question/create}" class="btn btn-primary">질문 등록하기</a>
 	</div>
-
-
-</body>
 </html>
