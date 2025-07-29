@@ -113,7 +113,8 @@ public class QuestionController {
 		if (!question.getAuthor().getUsername().equals(principal.getName())) {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "수정권한이 없습니다.");
 		}
-		this.questionService.modify(question, questionForm.getSubject(), questionForm.getContent());
+		String con = URLDecoder.decode(questionForm.getContent(), StandardCharsets.UTF_8);
+		this.questionService.modify(question, questionForm.getSubject(), con);
 		return String.format("redirect:/question/detail/%s", id);
 	}
 
